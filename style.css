@@ -1,0 +1,199 @@
+    body {
+      background-image: url(background.jpg);
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-blend-mode: overlay;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgba(10, 25, 47, 1);
+      color: white;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 12rem;
+      backdrop-filter: blur(25px);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.4s ease;
+    }
+
+    nav a:hover {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 20px;
+      text-shadow: 0 0 15px white;
+      transition: 0.4s ease;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    .hero-text button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #234a88;
+      color: #83abeb;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.4s ease;
+      animation: buttonanim 6s linear infinite;
+    }
+
+    .hero-text button:hover {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.4s ease;
+    }
+
+    .hero img {
+      width: 900px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .service {
+      background-color: #0b2246;
+      margin: 1rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+      transition: 0.4s ease;
+    }
+    
+    .service:hover {
+      background-color: #0b2246;
+      margin: 1rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+      scale: 1.1;
+      text-shadow: 0 0 10px white;
+      transition: 0.4s ease;
+    }
+
+    .service h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .about {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about h2 {
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    #echoza {
+        width: 150px;
+        height: auto;
+        position: relative;
+        display: inline-block;
+    }
+
+    footer {
+    background-color: #0b2246;
+    padding: 30px 3rem 10px;
+    width: 94vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    color: white; 
+    }
+
+    footer section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    }
+
+    footer .haklar {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    }
+    
+    @keyframes float {
+        50% {
+            transform: rotate(5deg) translateY(-50px);
+        }
+        100% {
+            scale: 1;
+        }
+    }
+
+    @keyframes buttonanim {
+        50% {
+            box-shadow: none;
+            text-shadow: none;
+        }
+        75% {
+            box-shadow: 0 0 25px 5px #3b82f6;
+            text-shadow: 0 0 15px white;
+            color: white;
+        }
+        100% {
+            box-shadow: none;
+            text-shadow: none;
+        }
+    }
