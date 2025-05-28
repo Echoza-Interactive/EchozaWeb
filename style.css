@@ -142,11 +142,33 @@
       line-height: 1.6;
     }
 
+    .whyus {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .whyus h2 {
+      margin-bottom: 1rem;
+    }
+
+    .whyus p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
     #echoza {
         width: 150px;
         height: auto;
         position: relative;
         display: inline-block;
+        transition: 0.2s ease;
+    }
+
+    #echoza:hover {
+        transform: rotate(15deg);
+        scale: 1.2;
+        transition: 0.5s ease;
     }
 
     footer {
@@ -171,6 +193,11 @@
     width: 100%;
     margin-top: 20px;
     text-align: center;
+    }
+
+    #whyus {
+        display: flex; 
+        flex-direction: row;
     }
     
     @keyframes float {
@@ -197,3 +224,128 @@
             text-shadow: none;
         }
     }
+
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  #echoza {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-text button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .service {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about {
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  #whyus {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+  }
+
+  #whyus .left {
+    display:inline-block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #whyus .sebep {
+    width: 100%;
+  }
+
+  footer section {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .service {
+    scale: 0.8;
+    padding-left: 0px;
+    padding-right: 20px;
+    margin: 0px;
+  }
+}
