@@ -39,6 +39,79 @@
       transition: 0.4s ease;
     }
 
+    #teklifPanel {
+      opacity: 1;
+      background: #0b2246;
+      color: white;
+      border-radius: 20px;
+      display: none;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      transition: 1s ease;
+    }
+
+    #teklifPanel .sol-kisim {
+      flex: 1;
+    }
+
+    #teklifPanel .sag-kisim {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #teklifPanel input[type="text"],
+    #teklifPanel input[type="number"],
+    #teklifPanel textarea {
+      width: 95%;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: none;
+    }
+
+    #teklifPanel textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    #teklifPanel button[type="submit"] {
+      padding: 0.75rem;
+      background-color: #234a88;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 98%;
+      transition: background-color 0.3s ease;
+    }
+
+    #teklifPanel button[type="submit"]:hover {
+      background-color: #e5e5e5;
+    }
+
+    #kapatBtn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      color: white;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #teklifPanel:active {
+      scale: 1;
+      transition: 1s ease;
+    }
+
     .hero {
       display: flex;
       flex-direction: row;
@@ -199,7 +272,48 @@
         display: flex; 
         flex-direction: row;
     }
+
+    .gradientYazilim {
+      animation: gradientAnim 1.5s linear infinite;
+      background: linear-gradient(90deg,rgba(0, 255, 255, 1) 0%, rgba(87, 255, 133, 1) 50%, rgba(0, 255, 255) 100%); 
+      background-size: 200% auto; 
+      background-clip: text; 
+      color: transparent;
+    }
+
+    .gradientYazilim::before {
+      content: attr(data-text);
+      filter: blur(10px);
+      position: absolute;
+      animation: gradientAnim 1.5s linear infinite;
+      background: linear-gradient(90deg,rgba(0, 255, 255, 1) 0%, rgba(87, 255, 133, 1) 50%, rgba(0, 255, 255) 100%); 
+      background-size: 200% auto; 
+      background-clip: text; 
+      color: transparent;
+    }
     
+    .teklifAl {
+      color: rgba(235, 235, 235, 1);
+      font-weight: bold;
+      background: linear-gradient(90deg,rgba(0, 255, 255, 1) 0%, rgba(87, 255, 133, 1) 50%, rgba(0, 255, 255) 100%); 
+      background-size: 200% auto; 
+      padding: 6px 20px;
+      border: 0px;
+      border-radius: 15px;
+      box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .teklifAl:hover {
+      font-weight: bold;
+      background: linear-gradient(144deg,rgba(0, 100, 255, 1) 0%, rgba(0, 200, 133, 1) 50%, rgba(0, 15, 255) 100%); 
+      background-size: 100% auto;
+      background-clip: text;
+      color: transparent;
+      border: 0px;
+      border-radius: 15px;
+      box-shadow: 0 0 8px 1px rgba(0, 1, 1, 0.1);
+    }
+
     @keyframes float {
         50% {
             transform: rotate(5deg) translateY(-50px);
@@ -223,6 +337,15 @@
             box-shadow: none;
             text-shadow: none;
         }
+    }
+
+    @keyframes gradientAnim {
+      0% {
+        background-position: 200% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
 
