@@ -6,8 +6,12 @@
   <title>Echoza Interactive</title>
   <link rel="icon" type="image/x-icon" href="image (1).jpg">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <script src="https://kit.fontawesome.com/587ea6f11f.js" crossorigin="anonymous"></script>   
   <script src="script.js"></script>  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
   <span id="particles-js" style="opacity: 0.1; scale: 0.9; position: absolute; z-index: -1; width: 100%; height: 100%;"></span>
@@ -23,7 +27,7 @@
     </nav>
   </header>
 
-  <section id="teklifPanel" class="gizli">
+  <section id="teklifPanel">
     <button id="kapatBtn" onclick="hideTeklif();">&times;</button>
     <div class="sol-kisim">
       <h1>Projeniz mi var?</h1>
@@ -50,26 +54,26 @@
   </section>
 
 <section id="services" class="services">
-  <div class="service">
+  <div class="service" data-aos="flip-left">
     <h3>Echoza <span style="color: #74C0FC; text-shadow: 0 0 15px #74C0FC;">Web</span></h3>
     <p>Modern dijital ürünlerle en iyi web deneyimini sunuyoruz.</p>
   </div>
-  <div class="service">
+  <div class="service" data-aos="flip-left">
     <h3>Echoza <span style="color: #74fc74; text-shadow: 0 0 15px #74fc74;">Software</span></h3>
     <p>Platformlar arası yenilikçi ve bug-free isteğiniz doğrultusunda uygulama hizmeti.</p>
   </div>
-  <div class="service">
+  <div class="service" data-aos="flip-left">
     <h3>Echoza <span style="color: #fc7474; text-shadow: 0 0 15px #fc7474;">Design</span></h3>
     <p>İşletmelerin etkileyici ve sezgisel kullanıcı deneyimleri oluşturmasına yardımcı oluyoruz.</p>
   </div>
-  <div class="service">
+  <div class="service" data-aos="flip-left">
     <h3>Echoza <span style="color: #8874fc; background-color: rgba(136, 116, 252, 0.1); padding: 0 6px; text-shadow: 0 0 15px #8874fc;">Games</span></h3>
     <p>Üzerinde çalıştığımız oyunlarımıza göz atmayı unutmayın!</p>
     <button style="border: 0px; background-color: #8874fc; border-radius: 8px; width: 70%; height: 30px; color: white; font-weight: bold;">Beni oraya götür!</button>
   </div>
 </section>
 
-  <section id="whyus" class="whyus">
+  <section id="whyus" class="whyus" data-aos="flip-left">
     <div class="left" style="width: 18%; padding: 2rem; background-color: rgba(116, 192, 252, 0.1);">
         <h2>Neden Biz?</h2>
         <hr>
@@ -120,5 +124,10 @@
         <p>Copyright © 2025 Echoza Interactive | Tüm hakları saklıdır.</p>
     </div>
   </footer>
+  <script>
+  AOS.init({
+        duration: 1100, // values from 0 to 3000, with step 50ms
+    });
+</script>
 </body>
 </html>

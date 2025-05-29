@@ -1,11 +1,7 @@
 function showTeklif() {
-    if(document.getElementById("teklifPanel").style.display == "flex") {
-        document.getElementById("teklifPanel").style.display = "none";
-    } else {
-        document.getElementById("teklifPanel").style.display = "flex";
-    }
+    $("#teklifPanel").slideToggle();
 }
 
 function hideTeklif() {
-    document.getElementById("teklifPanel").style.display = "none";
+        $("#teklifPanel").slideToggle();
 }

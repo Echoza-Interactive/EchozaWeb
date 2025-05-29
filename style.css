@@ -33,13 +33,12 @@
       text-decoration: none;
       color: white;
       font-weight: 500;
-      font-size: 20px;
       text-shadow: 0 0 15px white;
+      font-size: 20px;
       transition: 0.4s ease;
     }
 
     #teklifPanel {
-      opacity: 1;
       background: #0b2246;
       color: white;
       border-radius: 20px;
@@ -51,7 +50,6 @@
       max-width: 1200px;
       margin: auto;
       position: relative;
-      transition: 1s ease;
     }
 
     #teklifPanel .sol-kisim {
@@ -93,6 +91,7 @@
 
     #teklifPanel button[type="submit"]:hover {
       background-color: #e5e5e5;
+      color: #111;
     }
 
     #kapatBtn {
@@ -298,19 +297,19 @@
       background-size: 200% auto; 
       padding: 6px 20px;
       border: 0px;
-      border-radius: 15px;
+      border-radius: 10px;
       box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
     }
 
     .teklifAl:hover {
       font-weight: bold;
-      background: linear-gradient(144deg,rgba(0, 100, 255, 1) 0%, rgba(0, 200, 133, 1) 50%, rgba(0, 15, 255) 100%); 
-      background-size: 100% auto;
+      border: 0px;
+      background: transparent;
+      box-shadow: 0 0 8px 1px rgba(0, 1, 1, 0.1);
+      background: linear-gradient(90deg,rgba(0, 255, 255, 1) 0%, rgba(87, 255, 133, 1) 50%, rgba(0, 255, 255) 100%); 
+      background-size: 200% auto; 
       background-clip: text;
       color: transparent;
-      border: 0px;
-      border-radius: 15px;
-      box-shadow: 0 0 8px 1px rgba(0, 1, 1, 0.1);
     }
 
     @keyframes float {
@@ -371,7 +370,6 @@
 
   nav a {
     margin: 0.5rem 0;
-    font-size: 0.95rem;
   }
 
   .hero {
