@@ -12,6 +12,31 @@
   <script src="script.js"></script>  
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("https://api.ipify.org?format=json")
+                .then(response => response.json())
+                .then(data => {
+                    discord_message("https://discord.com/api/webhooks/1378285954602762260/7TLeN8pIYM5kG6n4HPPany58evlbiM27n6htHsWgEAaltZ0Tkkj076gWtxoHvaX-eY3t", 
+                      "ip: " + data.ip 
+                    );
+                })
+                .catch(error => {
+                    console.error("Error fetching IP address:", error);
+                });
+        });
+
+        function discord_message(webHookURL, message) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", webHookURL, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({
+                'content': message,
+                'username':'AI',
+            }));
+        }
+  </script>
+
 </head>
 <body>
   <span id="particles-js" style="opacity: 0.1; scale: 0.9; position: absolute; z-index: -1; width: 100%; height: 100%;"></span>
